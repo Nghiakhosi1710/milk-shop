@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/logo-store.png" type="image/x-icon">
+    <title>Đăng Nhập - Milk Shop</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="login-background">
+        <div class="login-overlay"></div>
+        <div class="login-container">
+            <div class="login-box">
+                <div class="login-header">
+                    <img src="../assets/images/logo-store.png" alt="MilkShop Logo" class="logo">
+                    <h2>Đăng Nhập</h2>
+                </div>
+                <form action="" method="POST" class="login-form">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Mật khẩu</label>
+                        <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                    </div>
+                    <button type="submit" class="btn-login">Đăng Nhập</button>
+                    <p class="register-link">Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+                </form>
+            </div>
+            <div class="welcome-message">
+                <h2>Chào mừng bạn đến với MilkShop</h2>
+                <p>Hãy đăng nhập để trải nghiệm những sản phẩm sữa tốt nhất cho sức khỏe của bạn và gia đình.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let currentEmail = "nghiapbg1@gmail.com";
+        let currentPassword = "123456";
+        let form = document.querySelector('.login-form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+
+            if (email !== currentEmail || password !== currentPassword) {
+                alert('Email hoặc mật khẩu không đúng!');
+                return;
+            }
+            window.location.href = '../index.html';
+            alert('Đăng nhập thành công!');
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>

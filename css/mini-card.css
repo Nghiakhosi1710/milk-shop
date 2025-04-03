@@ -1,0 +1,142 @@
+.mini-cart {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 360px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    z-index: 9999;
+}
+
+.mini-cart.active {
+    right: 0;
+}
+
+/* Header */
+.mini-cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #1976d2;
+    color: white;
+}
+
+.mini-cart-header h4 {
+    margin: 0;
+}
+
+#close-mini-cart {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Body */
+.mini-cart-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+/* Item */
+.mini-cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.mini-cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.mini-cart-item button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mini-cart-item button i {
+    color: #d21919;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.mini-cart-item button i:hover {
+    font-weight: 700;
+}
+
+.mini-cart-item-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.mini-cart-item-info h5 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.mini-cart-item-info span {
+    color: #1976d2;
+    font-weight: bold;
+}
+
+/* Footer */
+.mini-cart-footer {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.mini-cart-total {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.btn-checkout {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-checkout:hover {
+    background: #155ab6;
+}
+
+/* Badge giỏ hàng */
+.cart-box {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-box::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: #007dff9e;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+    line-height: 18px;
+}

@@ -1,0 +1,213 @@
+.checkout {
+    margin-top: 140px;
+}
+
+.checkout h1 {
+    margin: 20px 0;
+}
+
+.checkout__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 14px;
+}
+
+.card {
+    background: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.card__title {
+    margin-bottom: 12px;
+}
+
+.card__input,
+.card__select,
+.card__textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.card__radio {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.card__cart-items {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+/* Cart Item */
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.cart-item:hover {
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.cart-item__image img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.cart-item__info {
+    flex: 1;
+}
+
+.cart-item__title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.cart-item__price {
+    font-size: 12px;
+    color: #ff424e;
+    font-weight: bold;
+}
+
+.cart-item__quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-item__quantity-input {
+    width: 50px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.card__voucher {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card__voucher-input {
+    flex: 1;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.card__voucher-btn {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.card__voucher-btn:hover {
+    opacity: 0.8;
+}
+
+.card__info {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.card__total {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0070cc;
+}
+
+.card__order-btn {
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .checkout__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .voucher {
+        flex-direction: column;
+    }
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-content button {
+    margin-top: 10px;
+    background: #0d47a1;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
